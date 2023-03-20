@@ -3,8 +3,16 @@
 FROM tensorflow/tensorflow:latest-gpu-py3
 
 ENV LC_ALL C.UTF-8
-
+ENV TZ=Asia/Kolkata \
+    DEBIAN_FRONTEND=noninteractive
 # install system packages
+RUN apt update
+RUN apt upgrade -y
+RUN apt install software-properties-common -y
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
+
+RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+RUN dpkg --purge --force-depends ca-certificates-java
 
 RUN apt-get clean \
  && apt-get update --fix-missing \

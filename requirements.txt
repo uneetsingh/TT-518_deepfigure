@@ -1,3 +1,5 @@
+wheel
+maturin==0.12.17
 click
 traitlets
 Pillow
@@ -10,17 +12,17 @@ cffi
 dask
 editdistance
 elasticsearch
-fastparquet
+fastparquet==0.3.3
 keras
 lxml
 matplotlib
 more_itertools
 numpy
-opencv-python
+opencv-python==4.3.0.38
 pandas
 pytest
 pytest-xdist==1.18.2
-scipy
+scipy==1.1.0
 scikit-image
 seaborn
 tqdm
