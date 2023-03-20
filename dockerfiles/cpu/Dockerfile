@@ -19,7 +19,7 @@ RUN apt-get clean \
     libjpeg8-dev \
     libtiff5-dev \
     libjasper-dev \
-    libpng12-dev \
+    libpng-dev \
     tcl-dev \
     tk-dev \
     python3 \
